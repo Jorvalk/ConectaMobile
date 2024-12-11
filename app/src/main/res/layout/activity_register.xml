@@ -98,7 +98,7 @@
             android:layout_height="54dp"
             android:layout_gravity="center"
             android:backgroundTint="@android:color/holo_blue_dark"
-            android:text="Registrar"
+            android:text="Registrarse"
             android:textSize="18sp"
             android:textStyle="italic"
             android:textColor="#ffffff"/>

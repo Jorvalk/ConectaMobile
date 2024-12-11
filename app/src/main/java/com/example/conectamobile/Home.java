@@ -25,9 +25,9 @@ import com.google.firebase.database.ValueEventListener;
 public class Home extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private Button registrarContacto;
+    private Button registrarContacto, editarPerfil;
     private EditText editTextUserId;
-    private Button btnBuscarUsuario, btnListarUsuarios, btnEditar, btnEliminar;
+    private Button btnBuscarUsuario, btnListarUsuarios, btnEditar, btnEliminar, btnEditPerfil;
     private TextView tvNombre, tvApellido, tvCorreo, tvContrasenia, tvNombreUsuario;
 
     @Override
@@ -50,6 +50,7 @@ public class Home extends AppCompatActivity {
         registrarContacto = findViewById(R.id.btnRegistrarContacto);
         btnListarUsuarios = findViewById(R.id.btnListarUsuarios);
         btnBuscarUsuario = findViewById(R.id.btnBuscarUsuario);
+        btnEditPerfil = findViewById(R.id.btnEditPerfil);
         ImageButton cerrarSesion = findViewById(R.id.btnCerrarSesion);
 
         btnBuscarUsuario.setOnClickListener(new View.OnClickListener() {
@@ -109,6 +110,14 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, RegisterContacto.class);
+                startActivity(intent);
+            }
+        });
+
+        editarPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, EditUsuario.class);
                 startActivity(intent);
             }
         });

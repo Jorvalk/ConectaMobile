@@ -80,7 +80,7 @@
             android:id="@+id/textViewRegistro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Eres nuevo? "
+            android:text="¿Eres nuevo? "
             android:textSize="17sp"
             android:textColor="#000000"/>
 
@@ -88,7 +88,7 @@
             android:id="@+id/BotonRegistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrate"
+            android:text="Registrate aquí."
             android:textSize="17sp"
             android:clickable="true"
             android:textColor="#5d97d9"
