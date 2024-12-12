@@ -1,7 +1,5 @@
 package com.example.conectamobile;
 
-import android.app.Notification;
-import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +12,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
 
     private List<Message> messageList;
 
-    public ChatAdapter(List<Notification.MessagingStyle.Message> messageList) {
+    public ChatAdapter(List<Message> messageList) {
         this.messageList = messageList;
     }
 
@@ -29,7 +27,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
     @Override
     public void onBindViewHolder(@NonNull MessageViewHolder holder, int position) {
         Message message = messageList.get(position);
-        holder.textMessage.setText(message.getContent());
+        holder.textMessage.setText(message.getText());
     }
 
     @Override
@@ -39,7 +37,8 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.MessageViewHol
 
     @Override
     public int getItemViewType(int position) {
-        return messageList.get(position).isSentByUser() ? 1 : 0;
+        // Determinar si el mensaje fue enviado por el usuario
+        return messageList.get(position).getSender().equals("Usuario") ? 1 : 0;
     }
 
     static class MessageViewHolder extends RecyclerView.ViewHolder {

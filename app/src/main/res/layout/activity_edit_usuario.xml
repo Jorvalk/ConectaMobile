@@ -33,7 +33,6 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:autofillHints="emailAddress"
         android:fontFamily="sans-serif-light"
         android:text="Editar Usuario"
@@ -75,7 +74,6 @@
         android:hint="Cambiar correo"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnChangePhoto" />
 
@@ -88,7 +86,6 @@
         android:hint="Cambiar contraseña"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtEmail" />
 
@@ -100,7 +97,6 @@
         android:backgroundTint="#0099CC"
         android:text="Guardar cambios"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtPassword" />
 
@@ -112,7 +108,6 @@
         android:backgroundTint="#0099CC"
         android:text="Cerrar sesión"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnSaveChanges" />
 

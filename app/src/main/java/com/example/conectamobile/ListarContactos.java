@@ -36,10 +36,9 @@ public class ListarContactos extends AppCompatActivity {
 
         listViewUsuarios.setAdapter(adapter);
 
-        ImageButton volver = findViewById(R.id.btnVolver2);
-
         obtenerUsuariosDeFirebase();
 
+        ImageButton volver = findViewById(R.id.btnVolver2);
         volver.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

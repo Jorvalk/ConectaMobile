@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -27,7 +29,6 @@ public class EditUsuario extends AppCompatActivity {
     private ImageView imgProfile;
     private EditText edtEmail, edtPassword;
     private Button btnChangePhoto, btnSaveChanges, btnSignOut;
-
     private FirebaseAuth mAuth;
     private FirebaseUser currentUser;
     private FirebaseStorage storage;
@@ -56,6 +57,14 @@ public class EditUsuario extends AppCompatActivity {
         btnChangePhoto.setOnClickListener(v -> chooseImage());
         btnSaveChanges.setOnClickListener(v -> saveUserData());
         btnSignOut.setOnClickListener(v -> signOut());
+
+        ImageButton volver = findViewById(R.id.btnVolver2);
+        volver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void loadUserData() {

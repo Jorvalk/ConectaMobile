@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Home extends AppCompatActivity {
 
     private FirebaseAuth auth;
-    private Button registrarContacto, editarPerfil;
+    private Button registrarContacto;
     private EditText editTextUserId;
     private Button btnBuscarUsuario, btnListarUsuarios, btnEditar, btnEliminar, btnEditPerfil;
     private TextView tvNombre, tvApellido, tvCorreo, tvContrasenia, tvNombreUsuario;
@@ -114,7 +114,7 @@ public class Home extends AppCompatActivity {
             }
         });
 
-        editarPerfil.setOnClickListener(new View.OnClickListener() {
+        btnEditPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, EditUsuario.class);

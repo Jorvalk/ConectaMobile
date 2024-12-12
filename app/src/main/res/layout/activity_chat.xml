@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatActivity">
+    tools:context=".Chat">
 
     <!-- Encabezado del Chat -->
     <LinearLayout
@@ -15,7 +15,8 @@
         android:orientation="horizontal"
         android:background="@color/teal_700"
         android:padding="8dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        tools:ignore="MissingConstraints">
 
         <ImageView
             android:id="@+id/btnBack"
@@ -79,6 +80,6 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_send"
             android:contentDescription="Enviar mensaje"
-            android:tint="@color/teal_700" />
+            app:tint="@color/teal_700" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
